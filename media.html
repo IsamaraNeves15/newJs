@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Media</title>
+</head>
+<body>
+ <h1>Encontre a Média</h1> 
+ <p>Informe 3 números</p>
+  <input type="text" id="num1" placeholder="Número 1">
+  <input type="text" id="num2" placeholder="Número 2">
+  <input type="text" id="num3" placeholder="Número 3">
+  <button onclick="calcularMedia()">Calcular Média</button>
+
+  <div id="resultadoMedia"></div>
+
+ 
+
+ <script>
+  function calcularMedia() {
+    let num1 = parseFloat(document.getElementById("num1").value);
+    let num2 = parseFloat(document.getElementById("num2").value);
+    let num3 = parseFloat(document.getElementById("num3").value);
+    
+     // Verifica se todos os números são válidos
+     if (isNaN(num1) || isNaN(num2) || isNaN(num3)) {
+        alert("Por favor, insira três números válidos.");
+        return;
+      }
+
+    let media = (num1 + num2 + num3)/3;
+
+    document.getElementById("resultadoMedia").innerText = "A média é: " + media.toFixed(2); // Mostra a média com 2 casas decimais
+  }
+  
+ </script>
+</body>
+</html>

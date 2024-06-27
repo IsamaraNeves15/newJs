@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+
+  <h1>Qual o mês?</h1>
+  <input type="text" id="mes" placeholder="Digite um número de 1 a 12">
+  <button onclick="calcularMes()">Verificar</button>
+
+  
+   <!-- Div para exibir o resultado -->
+   <div id="resultadoDiv"></div>
+  
+  <script>
+    function calcularMes() {
+      let mes = parseInt(document.getElementById("mes").value);
+  
+      if (isNaN(mes) || mes < 1 || mes > 12) {
+        alert("Por favor, insira um número válido entre 1 e 12.");
+        return;
+        }
+  
+      let nomeDoMes;
+  
+      // Usando a estrutura switch para determinar o mês
+      switch (mes) {
+        case 1:
+          nomeDoMes = "Janeiro";
+           break;
+        case 2:
+          nomeDoMes = "Fevereiro";
+          break;
+        case 3:
+          nomeDoMes = "Março";
+          break;
+        case 4:
+          nomeDoMes = "Abril";
+          break;
+        case 5:
+          nomeDoMes = "Maio";
+          break;
+        case 6:
+          nomeDoMes = "Junho";
+          break;
+        case 7:
+          nomeDoMes = "Julho";
+          break;
+        case 8:
+          nomeDoMes = "Agosto";
+          break;
+        case 9:
+          nomeDoMes = "Setembro";
+          break;
+        case 10:
+          nomeDoMes = "Outubro";
+          break;
+        case 11:
+          nomeDoMes = "Novembro";
+          break;
+        case 12:
+          nomeDoMes = "Dezembro";
+          break;
+          default:
+            nomeDoMes = "Número inválido";
+        }
+
+      // Escreve o mês correspondente na tela
+      resultadoDiv.innerHTML = "O mês correspondente é: " + nomeDoMes;
+    }
+    </script>
+  </body>
+  </html>
+</body>
+</html>
